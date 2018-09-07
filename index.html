@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Favourite Recipes:</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <h1>Add Recipe:</h1>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="title" class="primary">Title:</label>
+          <input type="text" id="title" required/>
+        </div>
+
+        <div class="form-item">
+          <input type="radio" name="meal" value="breakfast">Breakfast<br>
+          <input type="radio" name="meal" value="lunch">Lunch<br>
+          <input type="radio" name="meal" value="dinner">Dinner<br>
+          <input type="radio" name="meal" value="other">Other
+        </div>
+
+        <div class="form-item">
+          <label for="course" class="primary">Course:</label>
+          <select id="course">
+            <option value="" disabled selected></option>
+            <option value="Canapes">Canapes</option>
+            <option value="Starter">Starter</option>
+            <option value="Article">Main Course</option>
+            <option value="Blog Post">Pudding</option>
+            <option value="Baking">Baking</option>
+            <div class="form-item">
+
+            </div>
+          </select>
+        </div>
+        <label for="ingredients" class="primary">Allergens:</label>
+        <input type="text" id="ingredients" required/>
+      </div>
+      <input type="submit" value="save"/>
+    </form>
+    <h1>Recipes</h1>
+    <div  class = "flex-box-container" id="recipe-form">
+
+    </div>
+    <button id="delete-button" type="button">Delete All</button>
+  </body>
+</html>
