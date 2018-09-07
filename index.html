@@ -16,6 +16,7 @@
         </div>
 
         <div class="form-item">
+          <label for="meal" class="primary">Meal:</label>
           <input type="radio" name="meal" value="breakfast">Breakfast<br>
           <input type="radio" name="meal" value="lunch">Lunch<br>
           <input type="radio" name="meal" value="dinner">Dinner<br>
@@ -31,13 +32,12 @@
             <option value="Article">Main Course</option>
             <option value="Blog Post">Pudding</option>
             <option value="Baking">Baking</option>
-            <div class="form-item">
-
-            </div>
           </select>
         </div>
-        <label for="ingredients" class="primary">Allergens:</label>
-        <input type="text" id="ingredients" required/>
+        <div class="form-item">
+          <label for="ingredients" class="primary">Allergens:</label>
+          <input type="text" id="allergens" required/>
+        </div>
       </div>
       <input type="submit" value="save"/>
     </form>
