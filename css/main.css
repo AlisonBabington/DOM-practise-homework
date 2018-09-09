@@ -52,6 +52,7 @@ h2 {
 }
 
 .input-button {
+  padding: 1rem;
   text-transform: uppercase;
   border-radius: 3px;
   background-color: #DADDD8;
@@ -78,7 +79,8 @@ h2 {
   padding: 1rem;
 }
 
-.recipe-item {
+li {
+  text-decoration: none;
   box-sizing: border-box;
   background-color: #DADDD8;
   display: inline-block;
@@ -86,6 +88,22 @@ h2 {
   padding: 2rem;
   border: solid #1C1C1C;
   text-align: center;
+}
+
+.recipe-title {
+  font-family: 'Abril Fatface',cursive;
+  font-size: 20px;
+}
+
+.recipe-title:visited {
+  color: #1C1C1C;
+}
+
+.recipe-title:hover {
+  background-color: #1C1C1C;
+  color:#EEF0F2;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 

@@ -25,6 +25,7 @@ const createNewRecipeItem = function (form) {
   link.appendChild(linkText);
   link.title = form.title.value;
   link.href = form.link.value;
+  link.classList.add('recipe-title');
   newRecipeItem.appendChild(link);
 
   const meal = document.createElement('h4');
@@ -35,13 +36,8 @@ const createNewRecipeItem = function (form) {
   course.textContent = form.course.value;
   newRecipeItem.appendChild(course);
 
-  const allergens = document.createElement('p');
-  allergens.textContent = form.allergens.value;
-  newRecipeItem.appendChild(allergens);
-
   return newRecipeItem;
 };
-
 
 const handleDeleteButton = function (event) {
   const recipeList = document.querySelector('#recipe-list');
