@@ -10,7 +10,7 @@ const FormInputSubmit = function(event) {
   event.preventDefault();
 
   const newRecipeItem = createNewRecipeItem(event.target);
-  const recipeList = document.querySelector('#recipe-form');
+  const recipeList = document.querySelector('#recipe-list');
   recipeList.appendChild(newRecipeItem);
 
   event.target.reset();
@@ -20,15 +20,18 @@ const createNewRecipeItem = function (form) {
   const newRecipeItem = document.createElement('li');
   newRecipeItem.classList.add('recipe-item');
 
-  const title = document.createElement('h2');
-  title.textContent = form.title.value;
-  newRecipeItem.appendChild(title);
+  const link = document.createElement('a');
+  let linkText = document.createTextNode(form.title.value);
+  link.appendChild(linkText);
+  link.title = form.title.value;
+  link.href = form.link.value;
+  newRecipeItem.appendChild(link);
 
-  const meal = document.createElement('h3');
+  const meal = document.createElement('h4');
   meal.textContent = form.meal.value;
   newRecipeItem.appendChild(meal);
 
-  const course = document.createElement('h3');
+  const course = document.createElement('h4');
   course.textContent = form.course.value;
   newRecipeItem.appendChild(course);
 
@@ -41,6 +44,6 @@ const createNewRecipeItem = function (form) {
 
 
 const handleDeleteButton = function (event) {
-  const recipeList = document.querySelector('#recipe-form');
+  const recipeList = document.querySelector('#recipe-list');
   recipeList.innerHTML = '';
 };
